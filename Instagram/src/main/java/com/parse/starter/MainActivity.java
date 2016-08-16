@@ -8,15 +8,19 @@
  */
 package com.parse.starter;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -34,12 +38,13 @@ import com.parse.SignUpCallback;
 import java.util.List;
 
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnKeyListener {
 
     EditText usernameField;
     EditText passwordField;
     TextView changeSignUpModeTextView;
     Button signUpButton;
+    RelativeLayout relativeLayout;
 
     Boolean isSignUpMode;
 
@@ -50,12 +55,28 @@ public class MainActivity extends AppCompatActivity {
 
     ParseAnalytics.trackAppOpenedInBackground(getIntent());
 
+      if (ParseUser.getCurrentUser() != null) {
+          leaveLogin();
+      }
+
       isSignUpMode = true;
 
       usernameField = (EditText)findViewById(R.id.username);
       passwordField = (EditText)findViewById(R.id.password);
       changeSignUpModeTextView = (TextView)findViewById(R.id.changeSignUpMode);
       signUpButton = (Button)findViewById(R.id.signUpButton);
+      relativeLayout = (RelativeLayout)findViewById(R.id.relativeLayout);
+
+      usernameField.setOnKeyListener(this);
+      passwordField.setOnKeyListener(this);
+
+      relativeLayout.setOnClickListener(new View.OnClickListener() {
+          @Override
+          public void onClick(View v) {
+              InputMethodManager imm = (InputMethodManager)getSystemService(INPUT_METHOD_SERVICE);
+              imm.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(), 0);
+          }
+      });
 
       changeSignUpModeTextView.setOnClickListener(new View.OnClickListener() {
           @Override
@@ -92,6 +113,7 @@ public class MainActivity extends AppCompatActivity {
             public void done(ParseException e) {
                 if (e == null) {
                     Log.i("MYAPP", "successful");
+                    leaveLogin();
                 } else {
                     Toast.makeText(getApplicationContext(), e.getMessage().substring(e.getMessage().indexOf(" ")), Toast.LENGTH_LONG).show();
                 }
@@ -105,6 +127,7 @@ public class MainActivity extends AppCompatActivity {
             public void done(ParseUser user, ParseException e) {
                 if (user != null) {
                     Log.i("MYAPP", "logged in");
+                    leaveLogin();
                 } else {
                     Toast.makeText(getApplicationContext(), e.getMessage().substring(e.getMessage().indexOf(" ")), Toast.LENGTH_LONG).show();
                 }
@@ -112,7 +135,26 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-  @Override
+    @Override
+    public boolean onKey(View v, int keyCode, KeyEvent event) {
+
+        if (keyCode == KeyEvent.KEYCODE_ENTER && event.getAction() == KeyEvent.ACTION_UP) {
+            if (isSignUpMode) {
+                signUpUser();
+            } else {
+                loginUser();
+            }
+        }
+
+        return false;
+    }
+
+    public void leaveLogin(){
+        Intent intent = new Intent(getApplicationContext(), UserList.class);
+        startActivity(intent);
+    }
+
+    @Override
   public boolean onCreateOptionsMenu(Menu menu) {
     // Inflate the menu; this adds items to the action bar if it is present.
     getMenuInflater().inflate(R.menu.menu_main, menu);
