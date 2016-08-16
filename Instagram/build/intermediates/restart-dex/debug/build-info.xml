@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<instant-run
+    abi="armeabi-v7a,armeabi"
+    api-level="22"
+    density="hdpi"
+    format="7"
+    timestamp="127097361615309"
+    token="-2175646887001814737" >
+
+    <task
+        name="javac"
+        duration="2254" />
+    <task
+        name="instant-run-dex"
+        duration="0" />
+    <task
+        name="instant-run-transform"
+        duration="164" />
+    <task
+        name="verifier"
+        duration="139" />
+
+    <artifact
+        location="/Users/gordonseto/Documents/android_projects/InstagramClone/Instagram/build/outputs/apk/Instagram-debug.apk"
+        type="MAIN" />
+
+    <build timestamp="127097361615309" >
+        <artifact
+            location="/Users/gordonseto/Documents/android_projects/InstagramClone/Instagram/build/outputs/apk/Instagram-debug.apk"
+            type="MAIN" />
+    </build>
+
+</instant-run>
