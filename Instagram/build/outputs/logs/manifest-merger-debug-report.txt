@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/gordonseto/Documents/android_projects/InstagramClone/Instagram/src/main/AndroidManifest.xml:9:1-40:12
+ADDED from /Users/gordonseto/Documents/android_projects/InstagramClone/Instagram/src/main/AndroidManifest.xml:9:1-41:12
 	package
 		ADDED from /Users/gordonseto/Documents/android_projects/InstagramClone/Instagram/src/main/AndroidManifest.xml:10:5-32
 		INJECTED from /Users/gordonseto/Documents/android_projects/InstagramClone/Instagram/src/main/AndroidManifest.xml
@@ -22,7 +22,7 @@ ADDED from /Users/gordonseto/Documents/android_projects/InstagramClone/Instagram
 	android:name
 		ADDED from /Users/gordonseto/Documents/android_projects/InstagramClone/Instagram/src/main/AndroidManifest.xml:13:22-76
 application
-ADDED from /Users/gordonseto/Documents/android_projects/InstagramClone/Instagram/src/main/AndroidManifest.xml:15:5-38:19
+ADDED from /Users/gordonseto/Documents/android_projects/InstagramClone/Instagram/src/main/AndroidManifest.xml:15:5-39:19
 MERGED from [com.android.support:appcompat-v7:22.2.0] /Users/gordonseto/Documents/android_projects/InstagramClone/Instagram/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:support-v4:22.2.0] /Users/gordonseto/Documents/android_projects/InstagramClone/Instagram/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.0/AndroidManifest.xml:22:5-20
 	android:label
@@ -64,9 +64,13 @@ ADDED from /Users/gordonseto/Documents/android_projects/InstagramClone/Instagram
 	android:name
 		ADDED from /Users/gordonseto/Documents/android_projects/InstagramClone/Instagram/src/main/AndroidManifest.xml:34:27-74
 activity#com.parse.starter.UserList
-ADDED from /Users/gordonseto/Documents/android_projects/InstagramClone/Instagram/src/main/AndroidManifest.xml:37:9-55
+ADDED from /Users/gordonseto/Documents/android_projects/InstagramClone/Instagram/src/main/AndroidManifest.xml:37:9-46
 	android:name
 		ADDED from /Users/gordonseto/Documents/android_projects/InstagramClone/Instagram/src/main/AndroidManifest.xml:37:19-43
+activity#com.parse.starter.UserFeed
+ADDED from /Users/gordonseto/Documents/android_projects/InstagramClone/Instagram/src/main/AndroidManifest.xml:38:9-55
+	android:name
+		ADDED from /Users/gordonseto/Documents/android_projects/InstagramClone/Instagram/src/main/AndroidManifest.xml:38:19-43
 uses-sdk
 INJECTED from /Users/gordonseto/Documents/android_projects/InstagramClone/Instagram/src/main/AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [com.android.support:appcompat-v7:22.2.0] /Users/gordonseto/Documents/android_projects/InstagramClone/Instagram/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/AndroidManifest.xml:20:5-43

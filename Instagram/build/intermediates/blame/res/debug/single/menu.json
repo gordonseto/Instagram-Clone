@@ -14,5 +14,9 @@
     {
         "merged": "/Users/gordonseto/Documents/android_projects/InstagramClone/Instagram/build/intermediates/res/merged/debug/menu/menu_user_list.xml",
         "source": "/Users/gordonseto/Documents/android_projects/InstagramClone/Instagram/src/main/res/menu/menu_user_list.xml"
+    },
+    {
+        "merged": "/Users/gordonseto/Documents/android_projects/InstagramClone/Instagram/build/intermediates/res/merged/debug/menu/menu_user_feed.xml",
+        "source": "/Users/gordonseto/Documents/android_projects/InstagramClone/Instagram/src/main/res/menu/menu_user_feed.xml"
     }
 ]

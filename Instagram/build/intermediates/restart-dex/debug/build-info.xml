@@ -4,37 +4,43 @@
     api-level="22"
     density="hdpi"
     format="7"
-    timestamp="132877692079945"
+    timestamp="135683178691464"
     token="-2175646887001814737" >
 
     <task
         name="javac"
-        duration="0" />
+        duration="1178" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="0" />
+        duration="119" />
     <task
         name="verifier"
-        duration="0" />
+        duration="101" />
 
-    <build timestamp="128471390868634" >
+    <artifact
+        location="/Users/gordonseto/Documents/android_projects/InstagramClone/Instagram/build/intermediates/transforms/dex/debug/folders/1000/5/slice_2/classes.dex"
+        type="DEX" />
+
+    <build timestamp="133449330229286" >
         <artifact
             location="/Users/gordonseto/Documents/android_projects/InstagramClone/Instagram/build/outputs/apk/Instagram-debug.apk"
             type="MAIN" />
     </build>
-    <build timestamp="131714381874458" >
+    <build timestamp="135011876959273" >
         <artifact
             location="/Users/gordonseto/Documents/android_projects/InstagramClone/Instagram/build/intermediates/res/resources-debug.ap_"
             type="RESOURCES" />
+        <artifact
+            location="/Users/gordonseto/Documents/android_projects/InstagramClone/Instagram/build/intermediates/transforms/dex/debug/folders/1000/5/slice_4/classes.dex"
+            type="DEX" />
     </build>
-    <build timestamp="132622515757250" >
+    <build timestamp="135683178691464" >
         <artifact
             location="/Users/gordonseto/Documents/android_projects/InstagramClone/Instagram/build/intermediates/transforms/dex/debug/folders/1000/5/slice_2/classes.dex"
             type="DEX" />
     </build>
-    <build timestamp="132877692079945" />
 
 </instant-run>

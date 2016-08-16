@@ -10,11 +10,14 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 
 import com.parse.FindCallback;
+import com.parse.ParseACL;
 import com.parse.ParseException;
 import com.parse.ParseFile;
 import com.parse.ParseObject;
@@ -66,6 +69,15 @@ public class UserList extends AppCompatActivity {
                 }
             }
         });
+
+        userList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent intent = new Intent(getApplicationContext(), UserFeed.class);
+                intent.putExtra("username", usernames.get(position));
+                startActivity(intent);
+            }
+        });
     }
 
     @Override
@@ -81,6 +93,12 @@ public class UserList extends AppCompatActivity {
 
         if (id == R.id.share) {
             showImagePicker();
+            return true;
+        } else if (id == R.id.logout) {
+            ParseUser.logOut();
+            Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+            startActivity(intent);
+
             return true;
         }
 
@@ -112,6 +130,11 @@ public class UserList extends AppCompatActivity {
                 ParseObject object = new ParseObject("Images");
                 object.put("username", ParseUser.getCurrentUser().getUsername());
                 object.put("image", file);
+
+                ParseACL acl = new ParseACL();
+                acl.setPublicReadAccess(true);
+                object.setACL(acl);
+
                 object.saveInBackground(new SaveCallback() {
                     @Override
                     public void done(ParseException e) {

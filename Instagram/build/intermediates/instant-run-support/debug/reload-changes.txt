@@ -1,0 +1,8 @@
+CHANGED,/Users/gordonseto/Documents/android_projects/InstagramClone/Instagram/build/intermediates/transforms/instantRun/debug/folders/4000/5/enhanced/com/android/tools/fd/runtime/AppPatchesLoaderImpl.class
+CHANGED,/Users/gordonseto/Documents/android_projects/InstagramClone/Instagram/build/intermediates/transforms/instantRun/debug/folders/4000/5/enhanced/com/parse/starter/UserFeed$override.class
+CHANGED,/Users/gordonseto/Documents/android_projects/InstagramClone/Instagram/build/intermediates/transforms/instantRun/debug/folders/4000/5/enhanced/com/parse/starter/UserFeed$1$override.class
+CHANGED,/Users/gordonseto/Documents/android_projects/InstagramClone/Instagram/build/intermediates/transforms/instantRun/debug/folders/4000/5/enhanced/com/parse/starter/UserFeed$1$1$override.class
+CHANGED,/Users/gordonseto/Documents/android_projects/InstagramClone/Instagram/build/intermediates/transforms/instantRun/debug/folders/4000/5/enhanced/com/parse/starter/UserList$3$override.class
+CHANGED,/Users/gordonseto/Documents/android_projects/InstagramClone/Instagram/build/intermediates/transforms/instantRun/debug/folders/4000/5/enhanced/com/parse/starter/UserList$2$override.class
+CHANGED,/Users/gordonseto/Documents/android_projects/InstagramClone/Instagram/build/intermediates/transforms/instantRun/debug/folders/4000/5/enhanced/com/parse/starter/UserList$1$override.class
+CHANGED,/Users/gordonseto/Documents/android_projects/InstagramClone/Instagram/build/intermediates/transforms/instantRun/debug/folders/4000/5/enhanced/com/parse/starter/UserList$override.class

@@ -216,6 +216,10 @@
         "source": "/Users/gordonseto/Documents/android_projects/InstagramClone/ParseStarterProject/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/layout/abc_select_dialog_material.xml"
     },
     {
+        "merged": "/Users/gordonseto/Documents/android_projects/InstagramClone/Instagram/build/intermediates/res/merged/debug/layout/activity_user_feed.xml",
+        "source": "/Users/gordonseto/Documents/android_projects/InstagramClone/Instagram/src/main/res/layout/activity_user_feed.xml"
+    },
+    {
         "merged": "/Users/gordonseto/Documents/android_projects/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/res/merged/debug/layout/abc_list_menu_item_icon.xml",
         "source": "/Users/gordonseto/Documents/android_projects/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/layout/abc_list_menu_item_icon.xml"
     },
